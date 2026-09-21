@@ -29,12 +29,12 @@ require("lazy").setup({
 			vim.cmd.colorscheme("atomonelight_matte")
 		end,
 	},
-	{
-		"tribela/transparent.nvim",
-		event = "VimEnter",
-		config = true,
-	},
-
+	-- {
+	-- 	"tribela/transparent.nvim",
+	-- 	event = "VimEnter",
+	-- 	config = true,
+	-- },
+	--
 	-- =============================================================================
 	-- Core Workflow
 	-- =============================================================================
@@ -282,6 +282,9 @@ require("lazy").setup({
 					"--completion-style=detailed",
 					"--fallback-style=Google",
 				},
+				init_options = {
+					fallbackFlags = { "-I/usr/local/include" },
+				},
 			})
 
 			vim.lsp.enable("clangd")
@@ -465,6 +468,12 @@ require("lazy").setup({
 				timeout_ms = 500,
 				lsp_format = "fallback",
 			},
+
+			formatters = {
+				clang_format = {
+					prepend_args = { "-style={BasedOnStyle: Linux, Standard: c++03}" },
+				},
+			},
 		},
 	},
 
@@ -561,10 +570,10 @@ require("lazy").setup({
 		event = { "BufReadPre", "BufNewFile" },
 	},
 
-	{
-		"wakatime/vim-wakatime",
-		event = "VeryLazy",
-	},
+	-- {
+	-- 	"wakatime/vim-wakatime",
+	-- 	event = "VeryLazy",
+	-- },
 
 	{
 		"segeljakt/vim-silicon",
@@ -574,12 +583,15 @@ require("lazy").setup({
 	-- =============================================================================
 	-- Language Specific
 	-- =============================================================================
+	{
+		"fibonatto/bend-vim",
+		ft = "bend"
+	},
 
 	{
 		"maxbane/vim-asm_ca65",
 		ft = "asm",
-	},
-
+	},	
 	{
 		"vim-scripts/Microchip-Linker-Script-syntax-file",
 		ft = "ld",
