@@ -1,4 +1,4 @@
-local U = require("onehalfmatte.util")
+local U = require("miasma.util")
 
 local M = {}
 
