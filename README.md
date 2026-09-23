@@ -74,7 +74,7 @@ nvim-config/
 
 #### Editing
 - `!` / `<leader>/` / `<leader>c` - Toggle comments
-- `U` - Undo redo equivalent from normal mode
+- `U` - Redo
 - `m` - Jump to matching bracket/parenthesis
 - `(` / `)` - Decrease/increase indent in normal mode
 - `<` / `>` - Re-indent visual selection
@@ -124,6 +124,7 @@ nvim-config/
 
 **Tools / Productivity**
 - `nvim-run-code` - Code execution panel
+- `basal-nvim` - Project-aware workflow helper
 - `conform.nvim` - Auto-formatting
 - `gitsigns.nvim` - Git sign indicators
 - `vim-fugitive` - Git integration
@@ -133,6 +134,7 @@ nvim-config/
 - `vim-easy-align` - Alignment helper
 - `vim-todo-highlight` - TODO highlight
 - `cord.nvim` - Presence integration
+- `VimFileType` - Extra filetype detection
 
 **Language-Specific**
 - `lean.nvim` - Lean 4 support
@@ -209,7 +211,7 @@ This command switches between light and dark variants.
 
 ### Lean 4
 - Full Lean support via `lean.nvim`
-- Custom keymaps are left enabled and can be adapted as desired
+- Custom keymaps are disabled for flexibility
 
 ### Agda
 - Agda filetype detection is enabled
